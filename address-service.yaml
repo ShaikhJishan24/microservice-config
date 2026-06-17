@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: address-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/address_db
+    username: root
+    password: Jishan@Verso
+
+server:
+  port: 8001
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+# it indicates that register with the below Eureka server
+# to register this service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
