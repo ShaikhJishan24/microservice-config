@@ -16,6 +16,11 @@ spring:
                 predicates:
                   - Path=/user/**
 
+              - id: auth_route
+                uri: lb://Auth-Service
+                predicates:
+                  - Path=/auth/**
+
 server:
   port: 8000
 
